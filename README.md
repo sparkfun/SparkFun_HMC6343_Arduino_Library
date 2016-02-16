@@ -31,8 +31,7 @@ Products that use this Library
 Version History
 ---------------
 
-* [v_H1.0_L1.1.0](https://github.com/sparkfun/HMC6343_Breakout/tree/v_H1.0_L1.1.0) - Hardware version 1.0, library version 1.1.0. Compatible with Arduino 1.6+ 
-* [vH10F10](https://github.com/sparkfun/HMC6343_Breakout/tree/vH10F10) - Hardware version 1.0, firmware version 1.0
+* [v_1.1.0](https://github.com/sparkfun/HMC6343_Breakout/tree/v_1.1.0) - Library version 1.1.0. Compatible with Arduino 1.6+ 
 
 License Information
 -------------------
