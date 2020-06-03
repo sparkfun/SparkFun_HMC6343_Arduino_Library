@@ -100,7 +100,6 @@ void SFE_HMC6343::readGeneric(uint8_t command, int* first, int* second, int* thi
   clearRawData(); // Clear object's rawData[] array before storing new values in the array
   
   // Wait for a 6 byte response via I2C and store them in rawData[] array
-  Wire.beginTransmission(_addr);
   Wire.requestFrom(_addr,(uint8_t)6); // Request the 6 bytes of data (MSB comes first)
   uint8_t i = 0;
   while(Wire.available() && i < 6)
@@ -108,8 +107,7 @@ void SFE_HMC6343::readGeneric(uint8_t command, int* first, int* second, int* thi
     rawData[i] = (uint8_t)Wire.read();
     i++;
   }
-  Wire.endTransmission();
-  
+
   // Convert 6 bytes received into 3 integers
   *first = rawData[0] << 8; // MSB
   *first |= rawData[1];     // LSB
@@ -199,12 +197,10 @@ uint8_t SFE_HMC6343::readOPMode1()
 
   sendCommand(POST_OPMODE1);
   delay(1);
-  
-  Wire.beginTransmission(_addr);
+
   Wire.requestFrom(_addr,(uint8_t)1);
   opmode1 = (uint8_t)Wire.read();
-  Wire.endTransmission();
-  
+
   return opmode1;
 }
 
@@ -219,12 +215,10 @@ uint8_t SFE_HMC6343::readEEPROM(uint8_t reg)
   Wire.endTransmission();
   
   delay(10);
-  
-  Wire.beginTransmission(_addr);
+
   Wire.requestFrom(_addr,(uint8_t)1);
   data = (uint8_t)Wire.read();
-  Wire.endTransmission();
-  
+
   return data;
 }
 
