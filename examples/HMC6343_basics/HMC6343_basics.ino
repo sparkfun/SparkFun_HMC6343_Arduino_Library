@@ -44,6 +44,9 @@ void setup()
   // Give the HMC6343 a half second to wake up
   delay(500); 
   
+  // Start I2C
+  Wire.begin();
+
   // Initialize the HMC6343 and verify its physical presence
   if (!compass.init())
   {

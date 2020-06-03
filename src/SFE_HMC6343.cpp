@@ -45,10 +45,7 @@ bool SFE_HMC6343::init()
 {
   bool ret = true;
   uint8_t data = 0x00;
-  
-  // Start I2C
-  Wire.begin();
-  
+    
   // Check for device by reading I2C address from EEPROM
   data = readEEPROM(SLAVE_ADDR);
   
