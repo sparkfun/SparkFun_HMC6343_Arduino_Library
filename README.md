@@ -31,6 +31,8 @@ Products that use this Library
 Version History
 ---------------
 
+* [v_1.1.2](https://github.com/sparkfun/HMC6343_Breakout/tree/v_1.1.2) - Minor update to remove unnecessary requests on I2C bus and move the `Wire.begin()` into sketch.
+* [v_1.1.1](https://github.com/sparkfun/HMC6343_Breakout/tree/v_1.1.1) - Keyword fix 
 * [v_1.1.0](https://github.com/sparkfun/HMC6343_Breakout/tree/v_1.1.0) - Library version 1.1.0. Compatible with Arduino 1.6+ 
 
 License Information
