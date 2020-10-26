@@ -89,7 +89,7 @@ void SFE_HMC6343::readTilt()
 // Generic function which sends the HMC6343 a specified command
 // It then collects 6 bytes of data via I2C and consolidates it into three integers
 // whose addresses are passed to the function by the above read commands
-void SFE_HMC6343::readGeneric(uint8_t command, int* first, int* second, int* third)
+void SFE_HMC6343::readGeneric(uint8_t command, int16_t* first, int16_t* second, int16_t* third)
 {
   sendCommand(command); // Send specified I2C command to HMC6343
   delay(1); // Delay response time
