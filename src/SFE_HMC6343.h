@@ -79,10 +79,10 @@ class SFE_HMC6343
   SFE_HMC6343();
   ~SFE_HMC6343();
   
-  int heading, pitch, roll;
-  int magX, magY, magZ;
-  int accelX, accelY, accelZ;
-  int temperature;
+  int16_t heading, pitch, roll;
+  int16_t magX, magY, magZ;
+  int16_t accelX, accelY, accelZ;
+  int16_t temperature;
   
   bool init();
   
@@ -116,7 +116,7 @@ class SFE_HMC6343
   void clearRawData();
   
   void sendCommand(uint8_t command);
-  void readGeneric(uint8_t command, int* first, int* second, int* third);
+  void readGeneric(uint8_t command, int16_t* first, int16_t* second, int16_t* third);
 };
 
 #endif
